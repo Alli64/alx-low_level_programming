@@ -2,19 +2,17 @@
 """defines function to measure perimeter of island"""
 
 
-def island_periemter(grid):
+def island_perimeter(grid):
     """returns perimeter of island in grid"""
-    width = len(grid[0])
-    height = len(grid)
-    edges = 0
-    size = 0
+    num = 0
+    perim = 0
 
-    for i in range(height):
-        for j i range(width):
-            if grid[i][j] ==1:
-                size += 1
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == 1:
+                perim += 1
                 if (j > 0 and grid[i][j - 1] == 1):
-                    edges += 1
+                    num += 1
                     if (i > 0 and grid[i - 1][j] == 1):
-                        edges += 1
-    return size * 4 - edges * 2
+                        num += 1
+    return perim * 4 - num * 2
