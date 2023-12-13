@@ -10,18 +10,18 @@
  * otherwise - index where value is located
  */
 
-int binary_search(int *array, size_t size, int value);
+int binary_search(int *array, size_t size, int value)
 {
 	size_t i, lo, hi;
 
 	if (array == NULL)
 		return (-1);
-	for (lo = 0, hi = size - 1; hi >= lo)
+	for (lo = 0, hi = size - 1; hi >= lo;)
 	{
 		printf("Searching in array: ");
 		for (i = lo; i < hi; i++)
 			printf("%d, ", array[i]);
-		printf("%d\n", arary[i]);
+		printf("%d\n", array[i]);
 
 		i = lo + (hi - lo) / 2;
 
